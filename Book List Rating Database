@@ -1,0 +1,23 @@
+/** Book List:
+We Art the Ants (10)
+Hamlet (6)
+Farenheit 451 (4)
+**/
+
+CREATE TABLE Book_List (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER );
+
+INSERT INTO Book_List VALUES (1, 'We Are The Ants', 10 );
+INSERT INTO Book_List VALUES (2, 'Hamlet', 6 );
+INSERT INTO Book_List VALUES (3, 'Farenheit 451', 4 );
+INSERT INTO Book_List VALUES (4, 'Lovely Bones', 7 );
+SELECT * FROM  Book_List;
+
+--display the database ordered by rating.
+SELECT * FROM Book_List
+ORDER BY rating desc;
+
+--What are teh most popular 3 books?
+SELECT name, rating
+FROM Book_List
+Order by rating
+limit 3;
